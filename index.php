@@ -1,4 +1,3 @@
-
 <!--Oggi pomeriggio provate ad immaginare quali sono le classi necessarie per creare uno shop online con le seguenti caratteristiche.
 L'e-commerce vende prodotti per gli animali.
 I prodotti saranno oltre al cibo, anche giochi, cucce, etc.
@@ -9,18 +8,28 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
  -->
 
 <?php
+    require_once __DIR__ . '/classes/CreditCard.php';
+    require_once __DIR__ . '/classes/Food.php';
+    require_once __DIR__ . '/classes/Kennels.php';
+    require_once __DIR__ . '/classes/Product.php';
+    require_once __DIR__ . '/classes/RegisteredUser.php';
+    require_once __DIR__ . '/classes/Toys.php';
+    require_once __DIR__ . '/classes/User.php';
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Shop</title>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
