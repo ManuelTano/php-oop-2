@@ -1,8 +1,9 @@
 <?php
 
-require_once __DIR__ . '/Product.php';
+require_once __DIR__ . '/Customer.php';
 
 class Cart {
+    
     private $products = [];
 
     public function getProductsList() {

@@ -12,10 +12,8 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
     include_once __DIR__ . '/classes/Food.php';
     include_once __DIR__ . '/classes/Kennels.php';
     include_once __DIR__ . '/classes/Product.php';
-    include_once __DIR__ . '/classes/RegisteredUser.php';
     include_once __DIR__ . '/classes/Toys.php';
-    include_once __DIR__ . '/classes/User.php';
-    include_once __DIR__ . '/classes/Address.php';
+    include_once __DIR__ . '/classes/Customer.php';
     include_once __DIR__ . '/classes/Cart.php';
 
 
@@ -23,7 +21,12 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
 
     var_dump($prodotto);
 
-   
+    $carta = new CreditCard('4502456475', 'Mastercard', '13-09-2024');
+
+    var_dump($carta);
+
+
+
 ?>
 
 <!DOCTYPE html>
