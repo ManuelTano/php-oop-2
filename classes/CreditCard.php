@@ -1,18 +1,50 @@
-<?php 
+<?php
+require_once __DIR__ . '/User.php';
+class CreditCard
+{
+    protected $number;
+    protected $type;
+    protected $expiration_date;
 
-    class CreditCard {
-        protected $owner;
-        protected $number;
-        protected $cvc;
-        protected $expiringDate;
-        protected $balance;
-
-        public function __construct($_owner, $_number, $_cvc, $_expiringDate, $_balance){
-            $this-> owner = $_owner;
-            $this-> number = $_number;
-            $this-> cvc = $_cvc;
-            $this-> expiringDate = $_expiringDate;
-            $this-> balance = $_balance;
-        }
+    public function __construct($number, $type, $expiration_date)
+    {
+        $this->setNumber($number);
+        $this->setType($type);
+        $this->setExpirationDate($expiration_date);
     }
-?>
+
+    public function isExpired()
+    {
+        $today = strtotime(date("d-m-Y"));
+        return $this->expiration_date < $today;
+    }
+
+    public function getExpirationDate()
+    {
+        return date("d-m-Y", $this->expiration_date);
+    }
+    public function setExpirationDate($expiration_date)
+    {
+        $this->expiration_date = strtotime($expiration_date);
+        return $this;
+    }
+    public function getNumber()
+    {
+        return $this->number;
+    }
+    public function setNumber($number)
+    {
+        $this->number = $number;
+        return $this;
+    }
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    public function setType($type)
+    {
+        $this->type = $type;
+        return $this;
+    }
+}

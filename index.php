@@ -8,14 +8,22 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
  -->
 
 <?php
-    require_once __DIR__ . '/classes/CreditCard.php';
-    require_once __DIR__ . '/classes/Food.php';
-    require_once __DIR__ . '/classes/Kennels.php';
-    require_once __DIR__ . '/classes/Product.php';
-    require_once __DIR__ . '/classes/RegisteredUser.php';
-    require_once __DIR__ . '/classes/Toys.php';
-    require_once __DIR__ . '/classes/User.php';
+    include_once __DIR__ . '/classes/CreditCard.php';
+    include_once __DIR__ . '/classes/Food.php';
+    include_once __DIR__ . '/classes/Kennels.php';
+    include_once __DIR__ . '/classes/Product.php';
+    include_once __DIR__ . '/classes/RegisteredUser.php';
+    include_once __DIR__ . '/classes/Toys.php';
+    include_once __DIR__ . '/classes/User.php';
+    include_once __DIR__ . '/classes/Address.php';
+    include_once __DIR__ . '/classes/Cart.php';
 
+
+    $prodotto = new Food('Micione', 8.99, 'Il cibo alla tua portata', 'Micissimo', '5kg', 'Cibo per gatti');
+
+    var_dump($prodotto);
+
+   
 ?>
 
 <!DOCTYPE html>

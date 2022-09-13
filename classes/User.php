@@ -1,34 +1,26 @@
 <?php 
     require_once __DIR__ . '/CreditCard.php';
+
     class User {
-        protected $firstname;
-        protected $lastname;
-        protected $creditCard;
+
+        protected $cart;
         
-        public function __construct($_firstname, $_lastname){
-            $this-> name = $_firstname;
-            $this-> surname = $_lastname;
+        public function __construct(){
+            $this-> setCart();
         }
 
-        public function setFirstName($_firstname){
-            $this-> firstname = $_firstname;
+        public function getCart(){
+            return $this->cart;
         }
 
-        public function getFirstName(){
-            return $this-> firstname;
+        protected function setCart(){
+            $this->cart = new Cart();
         }
 
-        public function setLastName($_lastname){
-            $this-> lastname = $_lastname;
+        public function addToCart($product) {
+            $this->cart->addProduct($product);
         }
 
-        public function getLastName(){
-            return $this-> lastname;
-        }
-
-        public function addCreditCard($creditCard){
-            $this-> creditCard = $creditCard;
-        }
     }
 
 ?>
